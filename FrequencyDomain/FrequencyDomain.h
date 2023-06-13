@@ -3,8 +3,8 @@
 
 class FrequencyDomain {
 public:
-    float Octave3rdRes[];
+    Octave3rd octave3rdRes;
 public:
-    Octave3rd getOctave3rd(int inputData);
+    Octave3rd getOctave3rd(FFT inputData);
     void setSize(int size);
 };

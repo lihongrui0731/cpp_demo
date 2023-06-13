@@ -5,10 +5,9 @@
 #define LOG(x) std::cout << x << std::endl
 
 int main() {
-    FrequencyDomain frequencyDomain;
-    Octave3rd res;
-    res = frequencyDomain.getOctave3rd(777);
-    LOG(res.freq);
-    LOG(res.power);
+    auto *values = new float[4800];
+    FFT inputData(5, 0, 4800, values);
+    FrequencyDomain frequencyDomain{};
+    Octave3rd res = frequencyDomain.getOctave3rd(inputData);
     return 0;
 }
